@@ -1,0 +1,115 @@
+<!-- index.html (Home Hub) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loveverse Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      background: #ffe6e6;
+      padding-top: 100px;
+    }
+    h1 {
+      color: #e91e63;
+    }
+    .card-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Loveverse 💖</h1>
+  <div class="card-grid">
+    <div class="card" onclick="location.href='love-birds/love-birds.html'">💌 Love Birds</div>
+    <div class="card" onclick="location.href='love-sign/love-sign.html'">❤️ Love Sign</div>
+    <div class="card" onclick="location.href='sorry-gift/sorry-gift.html'">🎁 Sorry Gift</div>
+  </div>
+  <div class="section">        
+    <label for="inputText">Design & Developed by Abdur Rahaman Shishir❤️</label>        
+  </div>
+</body>
+</html>
+
+<!-- Add this to the top of each love-birds.html, love-sign.html, and sorry-gift.html body -->
+<nav class="project-nav">
+  <a href="../index.html">🏠 Home</a>
+  <a href="../love-birds/love-birds.html">💌 Love Birds</a>
+  <a href="../love-sign/love-sign.html">❤️ Love Sign</a>
+  <a href="../sorry-gift/sorry-gift.html">🎁 Sorry Gift</a>
+</nav>
+<style>
+.project-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffcccc;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.project-nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #d63384;
+  font-weight: bold;
+}
+.project-nav a:hover {
+  color: #ff69b4;
+}
+
+</style>
+<style>
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sticky Footer */
+.section {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fcdeed;
+  color: #000000;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Ensure space for footer in page layout */
+body {
+  padding-bottom: 50px; /* Same or more than footer height */
+}
+
+/* Optional label styling */
+.section label {
+  margin: 0;
+  display: inline-block;
+}
+
+</style>

@@ -1,0 +1,171 @@
+/* Navigation Bar */
+.project-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffcccc;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.project-nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #d63384;
+  font-weight: bold;
+}
+
+.project-nav a:hover {
+  color: #ff69b4;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #e6f7ff, #f9f9f9);
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: flex-start; /* changed from center */
+  justify-content: center;
+  padding-top: 60px; /* space for fixed nav */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Card Styling */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Title */
+.card-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4cc3f1;
+  text-align: center;
+  margin: 0;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Textareas & Output Styling */
+textarea,
+.output-box {
+  background-color: #f6f8fa;
+  width: 100%;
+  height: 200px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  resize: none;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #5c6bc0;
+  box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.2);
+  outline: none;
+}
+
+.output-box {
+  background-color: #f6f8fa;
+  color: #000000;
+  overflow-y: auto;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(204, 233, 185, 0.1);
+}
+
+.output-icon {
+  margin-right: 10px;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Button Styling */
+button {
+  background-color: #3174f1;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 16px;
+}
+
+button:hover {
+  background-color: #275cbf;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 24px;
+  }
+}
+
+/* Fullscreen and Centered Card */
+.card {
+  width: 80%;
+  max-width: 900px;
+}

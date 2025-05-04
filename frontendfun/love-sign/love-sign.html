@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Sign</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="chad.png">
+</head>
+<body>
+  <!-- Sticky Navigation Bar -->
+  <nav class="project-nav">
+    <a href="../index.html">🏠 Home</a>
+    <a href="../love-birds/love-birds.html">💌 Love Birds</a>
+    <a href="../love-sign/love-sign.html">❤️ Love Sign</a>
+    <a href="../sorry-gift/sorry-gift.html">🎁 Sorry Gift</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <div class="container">
+    <header>❤️ Express Love ❤️</header>
+    <div class="content">
+      <div class="label-wrapper">
+        <span class="label" id="nameLabel">Abdur Rahaman Shishr</span>
+        <input type="text" id="nameInput" class="name-input" style="display: none;" />
+        <svg class="icon edit-icon" id="editIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path fill="#1dd1a1" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z"/>
+          <path fill="#1dd1a1" d="M20.71 7.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z"/>
+        </svg>
+        <svg class="icon save-icon" id="saveIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" stroke="#1dd1a1" stroke-width="2" fill="none"/>
+          <path d="M9 12l2 2l4 -4" stroke="#1dd1a1" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <div class="k-value" id="kDisplay">5</div>
+      <div class="buttons">
+        <button onclick="changeK(-5)">−</button>
+        <button onclick="changeK(5)">+</button>
+      </div>
+      <canvas id="graph" width="800" height="500"></canvas>
+    </div>
+  </div>
+
+  <audio id="clickSound" src="click.wav" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
